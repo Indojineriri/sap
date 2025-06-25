@@ -1,0 +1,177 @@
+{
+  "_version": "1.60.0",
+  "sap.app": {
+    "id": "receptionauto.allocationdifficultcase",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:lrop",
+      "version": "1.18.0",
+      "toolsId": "93a8017d-8e15-45e3-bbb3-c83d05f2f890"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/service/reception_auto/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "odataVersion": "4.0"
+        }
+      }
+    },
+    "crossNavigation": {
+      "inbounds": {
+        "receptionautoallocationdifficu-display": {
+          "semanticObject": "receptionautoallocationdifficu",
+          "action": "display",
+          "title": "{{receptionautoallocationdifficu-display.flpTitle}}",
+          "signature": {
+            "parameters": {},
+            "additionalParameters": "allowed"
+          }
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.120.13",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.fe.templates": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "receptionauto.allocationdifficultcase.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true
+        }
+      },
+      "@i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "uri": "i18n/i18n.properties"
+      }
+    },
+    "resources": {
+      "css": []
+    },
+    "routing": {
+      "config": {},
+      "routes": [
+        {
+          "pattern": ":?query:",
+          "name": "AllocationDifficultCasesList",
+          "target": "AllocationDifficultCasesList"
+        },
+        {
+          "pattern": "AllocationDifficultCases({key}):?query:",
+          "name": "AllocationDifficultCasesObjectPage",
+          "target": "AllocationDifficultCasesObjectPage"
+        },
+        {
+          "pattern": "AllocationDifficultCases({key})/aiRecommendations({key2}):?query:",
+          "name": "AIRecommendationsObjectPage",
+          "target": "AIRecommendationsObjectPage"
+        }
+      ],
+      "targets": {
+        "AllocationDifficultCasesList": {
+          "type": "Component",
+          "id": "AllocationDifficultCasesList",
+          "name": "sap.fe.templates.ListReport",
+          "options": {
+            "settings": {
+              "contextPath": "/AllocationDifficultCases",
+              "variantManagement": "Page",
+              "navigation": {
+                "AllocationDifficultCases": {
+                  "detail": {
+                    "route": "AllocationDifficultCasesObjectPage"
+                  }
+                }
+              },
+              "controlConfiguration": {
+                "@com.sap.vocabularies.UI.v1.LineItem": {
+                  "tableSettings": {
+                    "type": "ResponsiveTable"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "AllocationDifficultCasesObjectPage": {
+          "type": "Component",
+          "id": "AllocationDifficultCasesObjectPage",
+          "name": "sap.fe.templates.ObjectPage",
+          "options": {
+            "settings": {
+              "editableHeaderContent": false,
+              "contextPath": "/AllocationDifficultCases",
+              "navigation": {
+                "aiRecommendations": {
+                  "detail": {
+                    "route": "AIRecommendationsObjectPage"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "AIRecommendationsObjectPage": {
+          "type": "Component",
+          "id": "AIRecommendationsObjectPage",
+          "name": "sap.fe.templates.ObjectPage",
+          "options": {
+            "settings": {
+              "editableHeaderContent": false,
+              "contextPath": "/AllocationDifficultCases/aiRecommendations"
+            }
+          }
+        }
+      }
+    }
+  },
+  "sap.fiori": {
+    "registrationIds": [],
+    "archeType": "transactional"
+  }
+}

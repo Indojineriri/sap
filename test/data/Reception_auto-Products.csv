@@ -1,0 +1,6 @@
+ID;productCode;productName;category;unitPrice;leadTimeDays;strategicImportance;substitutionComplexity
+da61070d-3762-402b-8fa4-cea2b4f670af;PROD001;Laptop Screen;Electronics;250.00;5;High;Low
+0af6f9fb-2384-4d09-91de-f081112acbdc;PROD002;Wireless Mouse;Electronics;25.00;2;Medium;Medium
+2ede062a-9e2d-40e3-9c49-4e3d73fb72dc;PROD003;Mechanical Keyboard;Electronics;75.00;3;High;High
+06e70c61-c9f8-4036-9894-1fb76f164461;PROD004;USB-C Hub;Electronics;40.00;1;Medium;Low
+29a81743-f32e-4bf8-aaf5-51eb891b55c2;PROD005;Gaming Chair;Furniture;150.00;7;High;Medium

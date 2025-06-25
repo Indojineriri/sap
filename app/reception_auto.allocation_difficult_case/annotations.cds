@@ -1,0 +1,1 @@
+using reception_autoSrv as service from '../../srv/service';

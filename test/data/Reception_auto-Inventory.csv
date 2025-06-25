@@ -1,0 +1,6 @@
+ID;warehouse;currentStock;allocatedStock;availableStock;expectedInbound;inboundDate;minimumKeepLevel;product_ID
+da61070d-3762-402b-8fa4-cea2b4f670af;Main Warehouse;1000.00;200.00;800.00;300.00;2021-07-01;150.00;da61070d-3762-402b-8fa4-cea2b4f670af
+0af6f9fb-2384-4d09-91de-f081112acbdc;Secondary Warehouse;500.00;150.00;350.00;100.00;2021-07-02;100.00;0af6f9fb-2384-4d09-91de-f081112acbdc
+2ede062a-9e2d-40e3-9c49-4e3d73fb72dc;Tertiary Warehouse;750.00;300.00;450.00;200.00;2021-07-03;200.00;2ede062a-9e2d-40e3-9c49-4e3d73fb72dc
+06e70c61-c9f8-4036-9894-1fb76f164461;Main Warehouse;1200.00;400.00;800.00;500.00;2021-07-04;250.00;06e70c61-c9f8-4036-9894-1fb76f164461
+29a81743-f32e-4bf8-aaf5-51eb891b55c2;Secondary Warehouse;600.00;100.00;500.00;150.00;2021-07-05;120.00;29a81743-f32e-4bf8-aaf5-51eb891b55c2

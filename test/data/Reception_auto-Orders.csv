@@ -1,0 +1,6 @@
+ID;orderNumber;orderDate;requestedDate;businessImpact;urgencyReason;negotiationRoom;customers_ID
+da61070d-3762-402b-8fa4-cea2b4f670af;ORD001;2021-06-27;2021-06-28;High;Immediate delivery;None;da61070d-3762-402b-8fa4-cea2b4f670af
+0af6f9fb-2384-4d09-91de-f081112acbdc;ORD002;2021-06-27;2021-06-29;Medium;Scheduled delivery;Some;0af6f9fb-2384-4d09-91de-f081112acbdc
+2ede062a-9e2d-40e3-9c49-4e3d73fb72dc;ORD003;2021-06-27;2021-06-30;Low;No urgency;None;2ede062a-9e2d-40e3-9c49-4e3d73fb72dc
+06e70c61-c9f8-4036-9894-1fb76f164461;ORD004;2021-06-27;2021-06-29;High;Immediate delivery;None;06e70c61-c9f8-4036-9894-1fb76f164461
+29a81743-f32e-4bf8-aaf5-51eb891b55c2;ORD005;2021-06-27;2021-06-30;Medium;Scheduled delivery;Some;29a81743-f32e-4bf8-aaf5-51eb891b55c2

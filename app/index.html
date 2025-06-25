@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title> Project Preview </title>
+    <script src="https://ui5.sap.com/1.129.2/resources/sap-ui-core.js" 
+            id="sap-ui-bootstrap"
+            data-sap-ui-theme="sap_horizon"
+            data-sap-ui-bindingSyntax="complex" 
+            data-sap-ui-xx-bindingSyntax="complex"
+            data-sap-ui-resourceroots='{"assets": "assets"}' 
+            data-sap-ui-libs="sap.m,sap.uxap,sap.ui.layout,sap.f">
+    </script>
+    <link rel="stylesheet" href="assets/preview.css">
+</head>
+
+<body id="body" class="sapUiBody">
+    <script>
+        "use strict";
+        sap.ui.localResources("assets");
+        (function (jQuery, App, Page) {
+            sap.ui.getCore().attachInit(function () {
+                sap.ui.define([
+                    "sap/ui/core/mvc/Controller",
+                    "sap/ui/model/json/JSONModel"
+                ], function (Controller, JSONModel) {
+                    return Controller.extend("PreviewController", {
+                        onInit: function () {
+
+                            const data = {"Services":[{"ServiceName":"reception_autoSrv","DetailsURL":"./service/reception_auto/","Metadata":"./service/reception_auto/$metadata","Entities":[{"Name":"Products","URL":"./service/reception_auto/Products","FioriURL":"$fiori-preview/reception_autoSrv/Products#preview-app"},{"Name":"Customers","URL":"./service/reception_auto/Customers","FioriURL":"$fiori-preview/reception_autoSrv/Customers#preview-app"},{"Name":"Inventory","URL":"./service/reception_auto/Inventory","FioriURL":"$fiori-preview/reception_autoSrv/Inventory#preview-app"},{"Name":"Orders","URL":"./service/reception_auto/Orders","FioriURL":"$fiori-preview/reception_autoSrv/Orders#preview-app"},{"Name":"OrderItems","URL":"./service/reception_auto/OrderItems","FioriURL":"$fiori-preview/reception_autoSrv/OrderItems#preview-app"},{"Name":"AllocationDifficultCases","URL":"./service/reception_auto/AllocationDifficultCases","FioriURL":"$fiori-preview/reception_autoSrv/AllocationDifficultCases#preview-app"},{"Name":"AIRecommendations","URL":"./service/reception_auto/AIRecommendations","FioriURL":"$fiori-preview/reception_autoSrv/AIRecommendations#preview-app"},{"Name":"HumanDecisions","URL":"./service/reception_auto/HumanDecisions","FioriURL":"$fiori-preview/reception_autoSrv/HumanDecisions#preview-app"}],"EntitiesCount":8}]}
+                            this.getView().setModel(new JSONModel(data));
+                        }
+                    });
+                });
+                var oApp = new App()
+                var previewView = sap.ui.view({
+                    viewName: "assets.Preview",
+                    type: sap.ui.core.mvc.ViewType.XML
+                });
+                oApp.addPage(new Page({
+                    content: [previewView],
+                    showHeader: false
+                })).placeAt("content");
+            });
+
+        }(jQuery, sap.m.App, sap.m.Page));
+    </script>
+    <div id="content"></div>
+</body>
+
+</html>

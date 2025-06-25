@@ -1,0 +1,6 @@
+ID;customerCode;customerName;priorityLevel;flexibilityLevel;relationshipValue
+da61070d-3762-402b-8fa4-cea2b4f670af;CUST001;Acme Corp;1;High;100000.00
+0af6f9fb-2384-4d09-91de-f081112acbdc;CUST002;Beta LLC;2;Medium;75000.00
+2ede062a-9e2d-40e3-9c49-4e3d73fb72dc;CUST003;Gamma Inc;3;Low;50000.00
+06e70c61-c9f8-4036-9894-1fb76f164461;CUST004;Delta Co;1;High;120000.00
+29a81743-f32e-4bf8-aaf5-51eb891b55c2;CUST005;Epsilon Ltd;2;Medium;80000.00
