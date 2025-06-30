@@ -1,0 +1,80 @@
+{
+  "name": "Allocation_system",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@cap-js/hana": "^1",
+    "@sap-cloud-sdk/http-client": "^4.0.2",
+    "@sap-cloud-sdk/util": "^4.0.2",
+    "@sap/cds": "^8",
+    "@sap/low-code-event-handler": "^1.2.5",
+    "@sap/xsenv": ">=3.3.2 <3.3.3",
+    "@sap/xssec": "^4.8.0",
+    "express": "^4",
+    "hdb": "^0.19.12",
+    "passport": "^0.7.0",
+    "cap-llm-plugin": "^1.5.0"
+  },
+  "devDependencies": {
+    "@cap-js/cds-types": "^0.10.0",
+    "@cap-js/sqlite": "^1",
+    "@sap/dev-cap-tools": "^1.31.0"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "start-local": "npm run generate-entry-point && npm run cds-watch",
+    "generate-entry-point": "dev-cap-tools gen-entrypoint",
+    "cds-watch": "cds watch --open",
+    "watch-allocation_system.allocationapp": "cds watch --open allocation_system.allocationapp/webapp/index.html?sap-ui-xx-viewCache=false",
+    "watch-allocation_system.orderitemsapp": "cds watch --open allocation_system.orderitemsapp/webapp/index.html?sap-ui-xx-viewCache=false"
+  },
+  "cds": {
+    "sql": {
+      "native_hana_associations": false
+    },
+    "requires": {
+      "[production]": {
+        "db": "hana",
+        "auth": "xsuaa"
+      },
+      "auth": {
+        "[development]": {
+          "kind": "dummy"
+        },
+        "[production]": {
+          "kind": "xsuaa"
+        }
+      },
+      "gen-ai-hub": {
+        "gpt-4o": {
+          "destinationName": "GenAIHubDestination",
+          "deploymentUrl": "/v2/inference/deployments/dab68677bbc2757a",
+          "resourceGroup": "deepdive104",
+          "apiVersion": "2024-02-15-preview",
+          "modelName": "gpt-4o"
+        }
+      },
+      "GenAIHubDestination": {
+        "kind": "rest",
+        "credentials": {
+          "destination": "ConnectAITest",
+          "requestTimeout": "300000"
+        }
+      }
+    },
+    "plugins": {
+      "cap-llm-plugin": {
+        "impl": "cap-llm-plugin/srv/cap-llm-plugin.js",
+        "destinations": true
+      }
+    }
+  },
+  "lcap": true,
+  "sapux": [
+    "app/allocation_system.allocationapp",
+    "app/allocation_system.orderitemsapp"
+  ]
+}

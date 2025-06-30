@@ -1,0 +1,6 @@
+recommendationId;caseId_orderId;recommendationText
+rec-001;order-001;Consider expediting the shipping process to meet the customer's urgent request.
+rec-002;order-002;Recommend offering a discount to retain the customer due to the delay in delivery.
+rec-003;order-003;Suggest improving inventory management to prevent stockouts for popular items.
+rec-004;order-004;Advise on enhancing communication with the customer regarding their order status.
+rec-005;order-005;Encourage implementing a feedback loop to gather customer insights on order issues.

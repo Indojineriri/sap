@@ -1,0 +1,31 @@
+inventoryId;productproductId_productId;location;stock
+inv-001;prod-001;Tokyo;150
+inv-002;prod-002;New York;80
+inv-003;prod-003;Berlin;200
+inv-004;prod-001;London;50
+inv-005;prod-002;Tokyo;30
+inv-006;prod-003;New York;0
+inv-007;prod-004;Berlin;100
+inv-008;prod-005;Tokyo;75
+inv-009;prod-006;London;20
+inv-010;prod-007;New York;60
+inv-011;prod-008;Berlin;90
+inv-012;prod-009;Tokyo;45
+inv-013;prod-010;New York;110
+inv-014;prod-011;Berlin;30
+inv-015;prod-012;Tokyo;5
+inv-016;prod-013;London;150
+inv-017;prod-014;New York;80
+inv-018;prod-015;Berlin;200
+inv-019;prod-016;Tokyo;0
+inv-020;prod-017;New York;60
+inv-021;prod-018;Berlin;90
+inv-022;prod-019;Tokyo;75
+inv-023;prod-020;New York;30
+inv-024;prod-021;Berlin;100
+inv-025;prod-022;Tokyo;150
+inv-026;prod-023;New York;80
+inv-027;prod-024;Berlin;200
+inv-028;prod-025;Tokyo;50
+inv-029;prod-026;New York;0
+inv-030;prod-027;Berlin;60

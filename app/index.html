@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title> Project Preview </title>
+    <script src="https://ui5.sap.com/1.129.2/resources/sap-ui-core.js" 
+            id="sap-ui-bootstrap"
+            data-sap-ui-theme="sap_horizon"
+            data-sap-ui-bindingSyntax="complex" 
+            data-sap-ui-xx-bindingSyntax="complex"
+            data-sap-ui-resourceroots='{"assets": "assets"}' 
+            data-sap-ui-libs="sap.m,sap.uxap,sap.ui.layout,sap.f">
+    </script>
+    <link rel="stylesheet" href="assets/preview.css">
+</head>
+
+<body id="body" class="sapUiBody">
+    <script>
+        "use strict";
+        sap.ui.localResources("assets");
+        (function (jQuery, App, Page) {
+            sap.ui.getCore().attachInit(function () {
+                sap.ui.define([
+                    "sap/ui/core/mvc/Controller",
+                    "sap/ui/model/json/JSONModel"
+                ], function (Controller, JSONModel) {
+                    return Controller.extend("PreviewController", {
+                        onInit: function () {
+
+                            const data = {"Services":[{"ServiceName":"LLMService","DetailsURL":"./service/llm/","Metadata":"./service/llm/$metadata","Entities":[],"EntitiesCount":0},{"ServiceName":"allocation_systemSrv","DetailsURL":"./odata/v4/allocation-system-srv/","Metadata":"./odata/v4/allocation-system-srv/$metadata","Entities":[{"Name":"Customers","URL":"./odata/v4/allocation-system-srv/Customers","FioriURL":"$fiori-preview/allocation_systemSrv/Customers#preview-app"},{"Name":"Products","URL":"./odata/v4/allocation-system-srv/Products","FioriURL":"$fiori-preview/allocation_systemSrv/Products#preview-app"},{"Name":"Orders","URL":"./odata/v4/allocation-system-srv/Orders","FioriURL":"$fiori-preview/allocation_systemSrv/Orders#preview-app"},{"Name":"OrderItems","URL":"./odata/v4/allocation-system-srv/OrderItems","FioriURL":"$fiori-preview/allocation_systemSrv/OrderItems#preview-app"},{"Name":"Inventory","URL":"./odata/v4/allocation-system-srv/Inventory","FioriURL":"$fiori-preview/allocation_systemSrv/Inventory#preview-app"},{"Name":"AllocationDifficultCases","URL":"./odata/v4/allocation-system-srv/AllocationDifficultCases","FioriURL":"$fiori-preview/allocation_systemSrv/AllocationDifficultCases#preview-app"},{"Name":"AIRecommendations","URL":"./odata/v4/allocation-system-srv/AIRecommendations","FioriURL":"$fiori-preview/allocation_systemSrv/AIRecommendations#preview-app"}],"EntitiesCount":7}]}
+                            this.getView().setModel(new JSONModel(data));
+                        }
+                    });
+                });
+                var oApp = new App()
+                var previewView = sap.ui.view({
+                    viewName: "assets.Preview",
+                    type: sap.ui.core.mvc.ViewType.XML
+                });
+                oApp.addPage(new Page({
+                    content: [previewView],
+                    showHeader: false
+                })).placeAt("content");
+            });
+
+        }(jQuery, sap.m.App, sap.m.Page));
+    </script>
+    <div id="content"></div>
+</body>
+
+</html>

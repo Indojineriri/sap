@@ -1,0 +1,6 @@
+caseId;order_orderId;issueDescription;status
+case-001;order-001;Customer reported a delay in shipment;Open
+case-002;order-002;Product was damaged upon arrival;In Progress
+case-003;order-003;Customer requested a change in delivery address;Resolved
+case-004;order-004;Order was incorrectly processed;Closed
+case-005;order-005;Customer is unhappy with the product quality;Open

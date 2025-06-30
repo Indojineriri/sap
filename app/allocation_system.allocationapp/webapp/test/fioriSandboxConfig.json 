@@ -1,0 +1,11 @@
+{
+  "applications": {
+    "allocationsystem-allocationapp": {
+      "title": "Allocation App",
+      "description": "Manage Orders and AI Analysis",
+      "applicationType": "URL",
+      "url": "/allocation_system-allocationapp",
+      "navigationMode": "embedded"
+    }
+  }
+}
